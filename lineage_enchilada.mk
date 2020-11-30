@@ -38,3 +38,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="OnePlus6-user 8.1.0 OPM1.171019.011 273 release-keys"
 
 BUILD_FINGERPRINT := OnePlus/OnePlus6/OnePlus6:8.1.0/OPM1.171019.011/06140300:user/release-keys
+
+build/target/product/security/testkey  = device/oneplus/enchilada/security/releasekey
+build/target/product/security/platform = device/oneplus/enchilada/security/platform
+build/target/product/security/shared   = device/oneplus/enchilada/security/shared
+build/target/product/security/media    = device/oneplus/enchilada/security/media
