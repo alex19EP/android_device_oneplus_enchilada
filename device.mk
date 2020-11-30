@@ -40,6 +40,15 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
 
+# gapps variant
+GAPPS_VARIANT := stock
+GAPPS_EXCLUDED_PACKAGES := Books FitnessPrebuilt GoogleCamera GoogleEarth \
+                           GoogleHindiIME GoogleJapaneseInput GooglePinyinIME \
+                           GooglePinyinIME GoogleVrCore GoogleZhuyinIME Hangouts \
+                           KoreanIME LatinImeGoogle Music2 Music2Pano Music2Pano \
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_BROWSER_OVERRIDES := true
+
 # Pocket mode
 PRODUCT_PACKAGES += \
     OnePlusPocketMode
@@ -47,5 +56,7 @@ PRODUCT_PACKAGES += \
 # Inherit from oneplus sdm845-common
 $(call inherit-product, device/oneplus/sdm845-common/common.mk)
 
+# build gapps
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 # Inherit from vendor blobs
 #$(call inherit-product, vendor/oneplus/enchilada/enchilada-vendor.mk)
