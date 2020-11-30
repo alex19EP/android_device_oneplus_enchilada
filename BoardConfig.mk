@@ -29,3 +29,6 @@ TARGET_KERNEL_CONFIG := enchilada_defconfig
 -include vendor/oneplus/enchilada/BoardConfigVendor.mk
 
 WITH_DEXPREOPT := true
+
+# large system partition
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5997854720
